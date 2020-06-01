@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre nuestra APP-Web{% endblock title %}
+
+
+{% block content %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/sobreapp.css">
+
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<section id="about" class="section-content about">
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                <figure class="fig-profile wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                	<img class="img-responsive img-circle img-profile" title="Roland Maruntelu" alt="Roland Maruntelu" src="/static/img/chat-bot.png">
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h2 class="name"><b>Flask</b> Web-Messenger</h2>
+                    <div class="title-divider">
+                        <span class="hr-divider col-xs-5"></span>
+                        <span class="icon-separator col-xs-2"><i class="fa fa-star"></i></span>
+                        <span class="hr-divider col-xs-5"></span>
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2 text-center">
+                <p class="caption">Flask Web-Messenger es una aplicacion que le permitirá comunicarse facilmente con familiares y amigos.</p>
+                 <hr>
+                <p class="caption"><strong>1º</strong> Registrese para crear su cuenta con nosotros.</p>
+                <p class="caption"><strong>2º</strong> Una vez creada su cuenta podra acceder a su pagina de perfil. En ella podra consultar sus datos o bien modificarlos. Cada cierto tiempo se iran añadiendo algunos titulos musicales segun sus intereses.</p>
+                <p class="caption"><strong>3º</strong> Desde su perfil podrá ir a la opcion <strong>Enviar mensaje</strong> para poder mandar mensajes de texto y comunicarse con el resto de usuarios registrados.</p>
+                <img src="/static/img/robot.gif">
+                </div>
+
+            </div>
+        </div>
+</section>
+
+{% endblock content %}

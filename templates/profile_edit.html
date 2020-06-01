@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Editar perfil{% endblock title %}
+
+{% block content %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="padding-top: 60px;">
+  <h1 class="page-header">Editar Perfil</h1>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img src="/static/img/avatar.png" class="avatar img-circle img-thumbnail" alt="avatar">
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a>
+        <i class="fa fa-coffee"></i>
+        Mensaje de <strong>.alerta</strong>. Rellene los campos para editar su perfil de usuario. No es necesario cambiar su contraseña.
+      </div>
+      <h3>Informacion del usuario</h3>
+      <form class="form-horizontal" role="form" method="post">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Nombre de usuario:</label>
+          <div class="col-lg-8">
+            <input type="text" value="{{ user.name }}" name="profile-name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Direccion de Email:</label>
+          <div class="col-lg-8">
+            <input type="email" value="{{ user.email }}" name="profile-email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Antigua contraseña:</label>
+          <div class="col-md-8">
+            <input type="password" name="old-password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Nueva contraseña:</label>
+          <div class="col-md-8">
+            <input type="password" name="new-password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <button>Aceptar y guardar cambios</button>
+            <span></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

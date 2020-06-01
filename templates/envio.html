@@ -1,0 +1,96 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/chat.css">
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" type="text/css" href="/static/css/stilo.css">
+<script src="https://use.fontawesome.com/45e03a14ce.js"></script>
+<div class="main_section">
+   <div class="container">
+      <div class="chat_container">
+         <div class="col-sm-3 chat_sidebar">
+    	 <div class="row">
+            <div class="dropdown all_conversation">
+               <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fa fa-weixin" aria-hidden="true"></i>
+               Usuarios
+               <span class="caret pull-right"></span>
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="#"> All Conversation </a>  <ul class="sub_menu_ list-unstyled">
+                  <li><a href="#"> All Conversation </a> </li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+               </ul>
+			   </li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+               </ul>
+            </div>
+            <div class="member_list">
+                {% for user in users %}
+                    <li>{{ user.name }}</li>
+                {% endfor %}
+            </div>
+               <ul class="list-unstyled">
+                  <li class="left clearfix">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         </div>
+         <!--chat_sidebar-->
+
+
+         <div class="col-sm-9 message_section">
+		 <div class="row">
+		 <div class="new_message_head">
+		 <div class="pull-left"><button><i class="fa fa-plus-square-o" aria-hidden="true"></i>MENSAJES DE CHAT</button></div><div class="pull-right"><div class="dropdown">
+
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</div></div>
+		 </div><!--new_message_head-->
+
+		 <div class="chat_area">
+		 <ul class="list-unstyled">
+             {% for message in messages %}
+
+             <p>{{message.message}}</p>
+
+             {% endfor %}
+
+		 </ul>
+		 </div><!--chat_area-->
+         <form action="/send/" method="post">
+          <div class="message_write">
+    	 <textarea class="form-control" placeholder="Escribe tu mensaje" name="message" id="message"></textarea>
+
+		 <div class="clearfix"></div>
+
+         <button type="submit">Enviar Mensaje</button>
+
+         <select name="sender_id" id="sender">
+            {% for user in users %}
+            <option value="{{ user.id }}">{{ user.name}}</option>
+            {% endfor %}
+
+        </select>
+        <select name="receiver_id" id="receiver">
+            {% for user in users %}
+            <option value="{{ user.id }}">{{ user.name}}</option>
+            {% endfor %}
+        </select>
+		 </div>
+         </form>
+		 </div>
+
+       </div> <!--message_section-->
+      </div>
+   </div>
+</div>

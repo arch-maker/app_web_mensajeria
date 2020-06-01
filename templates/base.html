@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Web Messenger{% endblock title %}</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    </head>
+
+    <body>
+
+    <ul>
+        <li><a href="/profile">PERFIL</a></li>
+        <li><a href="/users">USUARIOS</a></li>
+        <li><a href="/">REGISTRO/ACCESO A CUENTA</a></li>
+        <li style="float:right"><a class="active" href="/sobreapp">NUESTRA APLICACION</a></li>
+    </ul>
+        {% block img %}
+        {% endblock img %}
+
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+    </body>
+</html>
