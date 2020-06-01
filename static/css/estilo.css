@@ -2,35 +2,24 @@
 body{
 	font-size: 12px;
 }
-/**
- * se aplica el ancho, margen centrado
- * borde de un pixel con redondeado, y rellenado
- * a la izquierda y derecha
- */
+
 #Contenedor{
 	width: 400px;
 	margin: 50px auto;
 	background-color: #F3EDED;
-        border: 1px solid #ECE8E8;
+    border: 1px solid #ECE8E8;
 	height: 400px;
 	border-radius:8px;
 	padding: 0px 9px 0px 9px;
 }
 
-/**
- * Aplicando al icono de usuario el color de fondo,
- * rellenado de 20px y un redondeado de 120px en forma
- * de un circulo
- */
+
 .Icon span{
       background: #A8A6A6;
       padding: 20px;
       border-radius: 120px;
 }
-/**
- * Se aplica al contenedor madre un margen de tamaño 10px hacia la cabecera y pie,
- * color de fuente blanco,un tamaño de fuente 50px y texto centrado.
- */
+
 .Icon{
      margin-top: 10px;
      margin-bottom:10px;
@@ -38,10 +27,7 @@ body{
      font-size: 50px;
      text-align: center;
 }
-/**
- * Se aplica al contenedor donde muestra en el pie
- * la opción de olvidaste tu contraseña?
- */
+
 .opcioncontra{
 	text-align: center;
 	margin-top: 20px;
